@@ -1,0 +1,9 @@
+node_modules/*
+*/node_modules/*
+*.suo
+*.sln
+*.njsproj
+.DS_Store
+npm-debug.log
+.settings/*
+.vscode

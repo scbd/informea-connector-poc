@@ -1,0 +1,42 @@
+<entry xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom" xml:base="http://informea/informea.svc/Meetings">
+  <id>{{xmlEscape id}}</id>
+  <category scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" term="Meeting"/>
+  <link href="Meetings('{{xmlEscape id}}')" rel="edit" title="Meeting"/>
+  <title>{{xmlEscape title.en}}</title>
+  <updated>{{xmlEscape updated}}</updated>
+  <author>
+    <name/>
+  </author>
+  <content type="application/xml">
+    <m:properties>
+      <d:protocolVersion m:type="Edm.Int16">1</d:protocolVersion>
+      <d:id>{{xmlEscape id}}</d:id>
+      <d:treaty>{{xmlEscape id}}</d:treaty>
+      <d:url>{{xmlEscape url}}</d:url>
+      <d:title m:type="Collection(LocalizableString)">
+        {{#each title}}  
+        <m:item type="LocalizableString">
+          <d:language>{{xmlEscape @key}}</d:language>
+          <d:value>{{xmlEscape this}}</d:value>
+        </m:item>
+        {{/each}}  
+      </d:title>
+      <d:description m:null="true" m:type="Collection(LocalizableString)"/>
+      <d:start m:type="Edm.DateTime">{{xmlEscape start}}</d:start>
+      <d:end m:type="Edm.DateTime">{{xmlEscape end}}</d:end>
+      <d:repetition m:null="true"/>
+      <d:kind m:null="true"/>
+      <d:type/>
+      <d:access m:null="true"/>
+      <d:status m:null="true"/>
+      <d:imageUrl m:null="true"/>
+      <d:imageCopyright m:null="true"/>
+      <d:location m:null="true"/>
+      <d:city m:null="true"/>
+      <d:country m:null="true"/>
+      <d:latitude m:null="true" m:type="Edm.Double"/>
+      <d:longitude m:null="true" m:type="Edm.Double"/>
+      <d:updated m:null="true">{{xmlEscape updated}}</d:updated>
+    </m:properties>
+  </content>
+</entry>

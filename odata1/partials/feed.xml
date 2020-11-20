@@ -1,0 +1,10 @@
+<feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom" xml:base="http://informea/informea.svc/Meetings">
+  <id>http://informea/informea.svc/Meetings</id>
+  <title type="text">{{xmlEscape title}}</title>
+  <updated>{{xmlEscape updated}}</updated>
+  <link href="Meetings" rel="self" title="Meetings"/>
+
+  {{#each records}}
+    {{> (lookup . 'type') }}
+  {{/each}}
+</feed>
