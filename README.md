@@ -20,3 +20,24 @@ The PoC demonstrates 2 MEA meetings endpoints: CBD and IPPC.
 
 > Important Note: SCBD does not recommend this html page parsing approach as a long term solution. The goal is to demonstrate a simple way of transforming an html output (for example a calendar on a webpage) to the InforMEA required OData format, with minimal efforts and resources. This option can be used quickly to parse and gather information from MEAs that have not made their data available to InforMEA yet. Any changes in the format of the html page could break the extraction process! For the longer term, it is highly recommended to find a more sustainable solution that would extract dara directly from the source and present it through an API. 
 
+## Example calls
+
+```bash
+#in xml
+curl -H "Accept: application/xml" https://informea-connector.cbddev.xyz/cbd/meetings?$top=5
+curl -H "Accept: application/xml" https://informea-connector.cbddev.xyz/cbd/meetings?$top=20&skip=5
+curl -H "Accept: application/xml" https://informea-connector.cbddev.xyz/ippc/meetings
+
+#in json
+curl -H "Accept: application/json" https://informea-connector.cbddev.xyz/cbd/meetings?$top=5
+curl -H "Accept: application/json" https://informea-connector.cbddev.xyz/ippc/meetings
+```
+
+## Sample mappers
+
+* [CBD Meeting](https://github.com/scbd/informea-connector-poc/blob/master/cbd/meetings.js)
+* [IPPC Meeting](https://github.com/scbd/informea-connector-poc/blob/master/ippc/meetings.js)
+
+## License
+
+[MIT](https://raw.githubusercontent.com/scbd/informea-connector-poc/master/LICENSE)
