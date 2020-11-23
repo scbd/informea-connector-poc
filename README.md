@@ -18,7 +18,7 @@ The PoC demonstrates 2 MEA meetings endpoints: CBD and IPPC.
 
 * https://informea-connector.cbddev.xyz/ippc/meetings returns list of IPPC meetings by grabbing & parsing IPPC calendar html page! YES! the same page you look at: https://www.ippc.int/en/year/calendar/, the result is cached in memory. No OData query parameter is supported / implemented for this one. 
 
-> Important Note: SCBD does not recommend this html page parsing approach as a long term solution. The goal is to demonstrate a simple way of transforming any source (eg: html output for example a calendar on a webpage) to the InforMEA required OData format, with minimal efforts and resources. This option can be used quickly to parse and gather information from MEAs that have not made their data available to InforMEA yet. *Any changes in the format of the html page could break the extraction process!* For the longer term, it is ***highy***- recommended to find a more sustainable solution that would extract dara directly from the source and present it through an API. 
+> Important Note: SCBD does not recommend this html page parsing approach as a long term solution. The goal is to demonstrate a simple way of transforming any source (eg: html output for example a calendar on a webpage) to the InforMEA required OData format, with minimal efforts and resources. This option can be used quickly to parse and gather information from MEAs that have not made their data available to InforMEA yet. *Any changes in the format of the html page could break the extraction process!* For the longer term, it is ***highy***- recommended to find a more sustainable solution that would extract data directly from the source and present it through an API. 
 
 ## Example calls
 
