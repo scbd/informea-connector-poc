@@ -4,7 +4,7 @@
 
 This proof of concept (PoC) code is to create an npm package that can be used to implement InforMEA protocol endpoints for partner MEAs into their existing infrastructure (temporarily or permanently). There is no need of a huge & complex OData library that requires complex development, backed by a SQL database with data synchronized etc. The connector can do live transformation i.e. bridging query to another system/data source (static files, solr, sql server, drupal api, existing webpage etc) to fit your infrastructure. 
 
-The library will provide OData query parser to an Abstract Syntax Tree (AST) object, which can be used to implement simple query (like: `$top` & `$skip`) or more complex query like (`$filter`, `$select` or `$orderBy`). It also provides agreed standard rendering format (OdDta1 XML, JSON) etc.
+The library will provide OData query parser to an Abstract Syntax Tree (AST) object, which can be used to implement simple query (like: `$top` & `$skip`) or more complex query like (`$filter`, `$select` or `$orderBy`). It also provides agreed standard rendering format (ODta1 XML, JSON) etc.
 
 The PoC shows subset of `Meeting` format. It allows rendering of result in OData1 XML and raw JSON format. The client chooses its preferred format by passing HTTP `Accept` headers with `application/xml` or `application/json` content type. the PoC respects weight client `Accept` syntax.
 
