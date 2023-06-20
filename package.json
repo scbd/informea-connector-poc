@@ -1,7 +1,7 @@
 {
   "name": "informea-connector-poc",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "node main.js",
     "dev": "npx nodemon main.js"

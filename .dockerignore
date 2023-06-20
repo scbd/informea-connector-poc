@@ -1,0 +1,6 @@
+**/.DS_Store
+.git
+.gitattributes
+.gitignore
+.settings
+node_modules
